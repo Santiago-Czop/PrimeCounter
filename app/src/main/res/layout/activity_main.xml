@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/digit0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/_0"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_number"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/digit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/_0"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_number"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/digit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/_0"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_number"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/digit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/_0"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_number"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/digit4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/_0"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_number"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/digit5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/_0"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_number"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/red_button"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:src="@drawable/button_normal"
+        android:contentDescription="@string/huge_red_pressable_button"/>
+
+
+</LinearLayout>
+
+

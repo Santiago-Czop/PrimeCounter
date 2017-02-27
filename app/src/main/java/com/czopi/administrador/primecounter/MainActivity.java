@@ -117,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
                             primesDifference--;
                             if (primesDifference != 0) {
                                 mHandler.postDelayed(this, 200);
+                            } else {
+                                saveNumber();
                             }
                         }
                     }, 200); //Creates a 1000 milliseconds delay between iteration
@@ -133,12 +135,9 @@ public class MainActivity extends AppCompatActivity {
                             digit1.setText("0");
                         }
                     }, 200);
+                    saveNumber();
                 }
 
-                SharedPreferences prefs = getSharedPreferences(
-                        "com.czopi.administrador.primecounter", Context.MODE_PRIVATE);
-                getNumberAsString();
-                prefs.edit().putString("currentPrime", currentPrimeText).apply();
             }
         });
         red_button.setOnTouchListener(new View.OnTouchListener() {
@@ -188,11 +187,11 @@ public class MainActivity extends AppCompatActivity {
             digit1.setText("0");
         } else {
             char[] currentPrimeTextArray = currentPrimeText.toCharArray();
-            digit1.setText(String.valueOf(currentPrimeTextArray[1]));
-            digit2.setText(String.valueOf(currentPrimeTextArray[2]));
-            digit3.setText(String.valueOf(currentPrimeTextArray[3]));
-            digit4.setText(String.valueOf(currentPrimeTextArray[4]));
-            digit5.setText(String.valueOf(currentPrimeTextArray[5]));
+            digit1.setText(String.valueOf(currentPrimeTextArray[0]));
+            digit2.setText(String.valueOf(currentPrimeTextArray[1]));
+            digit3.setText(String.valueOf(currentPrimeTextArray[2]));
+            digit4.setText(String.valueOf(currentPrimeTextArray[3]));
+            digit5.setText(String.valueOf(currentPrimeTextArray[4]));
         }
     }
 
@@ -206,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             counterX += 1;
         }
         //Iterates over primes and deletes compound numbers using Sieve of Eratosthenes
-        for (int i = 2; i < 100000; i++) {
+        for (int i = 2; i < 316; i++) {
             for (Iterator<Integer> iterator = primes.iterator(); iterator.hasNext(); ) {
                 Integer x = iterator.next();
                 if (x % i == 0) {
@@ -234,6 +233,13 @@ public class MainActivity extends AppCompatActivity {
         currentPrimeText += digit3.getText().toString();
         currentPrimeText += digit4.getText().toString();
         currentPrimeText += digit5.getText().toString();
+    }
+
+    public void saveNumber() {
+        SharedPreferences prefs = getSharedPreferences(
+                "com.czopi.administrador.primecounter", Context.MODE_PRIVATE);
+        getNumberAsString();
+        prefs.edit().putString("currentPrime", currentPrimeText).apply();
     }
 
 

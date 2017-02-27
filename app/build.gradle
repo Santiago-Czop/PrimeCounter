@@ -8,8 +8,8 @@ android {
         applicationId "com.czopi.administrador.primecounter"
         minSdkVersion 14
         targetSdkVersion 14
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
     }
     buildTypes {
         release {
